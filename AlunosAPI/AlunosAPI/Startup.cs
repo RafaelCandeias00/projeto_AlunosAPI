@@ -37,6 +37,7 @@ namespace AlunosAPI
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped<IAuthenticate, AuthenticateService>();
             services.AddScoped<IAlunoService, AlunosServices>();
 
             services.AddControllers();

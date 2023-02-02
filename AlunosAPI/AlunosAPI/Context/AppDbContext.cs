@@ -11,8 +11,9 @@ namespace AlunosAPI.Context
 
         public DbSet<Aluno> Alunos { get; set; }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Aluno>().HasData(
                 new Aluno
                 {
@@ -29,6 +30,6 @@ namespace AlunosAPI.Context
                     Idade = 22
                 }
                 );
-        }*/
+        }
     }
 }
